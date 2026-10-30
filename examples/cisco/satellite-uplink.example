@@ -1,0 +1,17 @@
+! Documentation template, not a full switch configuration.
+! Confirm platform, interface and VLAN allocation before applying.
+! VLANs must exist and required transit paths must be configured separately.
+interface GigabitEthernet1/0/3
+ description EXAMPLE_SATELLITE_HYPERVISOR
+ switchport mode trunk
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 80,901,902
+ no shutdown
+!
+! Read-only verification:
+! show interfaces GigabitEthernet1/0/3 status
+! show interfaces GigabitEthernet1/0/3 switchport
+! show interfaces trunk
+! show mac address-table interface GigabitEthernet1/0/3
+!
+! No credentials, AAA changes or save command included.

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Altera infrastructure: access, trust and services</title>
+  <desc id="desc">A conceptual architecture showing separate user and approved remote-admin paths, private DNS and TLS proxy, identity, Proxmox application services, security tooling and a planned satellite relay environment. It is not a physical topology or firewall rule map.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#82c7ed" stroke-width="1.5"/></marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#eaf2f8}
+      .title{font-size:30px;font-weight:700}.label{font-size:12px;letter-spacing:2px;fill:#82c7ed}
+      .heading{font-size:18px;font-weight:700}.body{font-size:14px;fill:#b8c8d7}.note{font-size:12px;fill:#b8c8d7}
+      .panel{fill:#142535;stroke:#41627a;stroke-width:1.5;rx:12}.planned{fill:#101d29;stroke:#82c7ed;stroke-dasharray:6 5;rx:12}
+      .line{fill:none;stroke:#82c7ed;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="650" rx="18" fill="#0b1420"/>
+  <text x="40" y="48" class="label">HAYDEN KRAFT / INFRASTRUCTURE PORTFOLIO</text>
+  <text x="40" y="91" class="title">Altera: access by design, not by accident.</text>
+  <text x="40" y="121" class="body">Conceptual trust boundaries · Sanitized lab architecture · No live addresses or credentials</text>
+
+  <rect x="40" y="175" width="240" height="120" class="panel"/>
+  <text x="60" y="205" class="label">USER ZONE</text>
+  <text x="60" y="235" class="heading">Domain workstations</text>
+  <text x="60" y="262" class="body">Approved company website</text>
+
+  <rect x="40" y="340" width="240" height="140" class="panel"/>
+  <text x="60" y="370" class="label">ADMINISTRATIVE ACCESS</text>
+  <text x="60" y="401" class="heading">Approved administrators</text>
+  <text x="60" y="428" class="body">Private overlay network</text>
+  <text x="60" y="451" class="body">Explicit access restrictions</text>
+
+  <rect x="350" y="175" width="290" height="120" class="panel"/>
+  <text x="370" y="205" class="label">IDENTITY &amp; APPLICATION ACCESS</text>
+  <text x="370" y="235" class="heading">AD DS · DNS · DHCP</text>
+  <text x="370" y="262" class="body">Domain services / website path</text>
+
+  <rect x="350" y="340" width="290" height="140" class="panel"/>
+  <text x="370" y="370" class="label">PRIVATE SERVICE ENTRY POINT</text>
+  <text x="370" y="401" class="heading">DNS facade + TLS proxy</text>
+  <text x="370" y="428" class="body">Lab CA / verified backend TLS</text>
+  <text x="370" y="451" class="body">Host-based routing / admin ACLs</text>
+
+  <rect x="710" y="175" width="450" height="160" class="panel"/>
+  <text x="730" y="205" class="label">APPLICATION &amp; MANAGEMENT SERVICES</text>
+  <text x="730" y="237" class="heading">Proxmox-hosted Linux services</text>
+  <text x="730" y="265" class="body">Mail · Website / portal · Vaultwarden</text>
+  <text x="730" y="290" class="body">Forgejo · Nextcloud · Hypervisor management</text>
+  <text x="730" y="315" class="note">Application authorization remains a separate control.</text>
+
+  <rect x="710" y="365" width="450" height="115" class="panel"/>
+  <text x="730" y="395" class="label">OBSERVABILITY &amp; SECURITY</text>
+  <text x="730" y="425" class="heading">Prometheus · Grafana · Wazuh · Loki</text>
+  <text x="730" y="453" class="body">Deployed tooling; collection coverage varies.</text>
+
+  <path d="M280 235H350" class="line"/>
+  <path d="M280 410H350" class="line"/>
+  <path d="M640 235H710" class="line"/>
+  <path d="M640 410H675V310H710" class="line"/>
+
+  <rect x="40" y="520" width="1120" height="82" class="planned"/>
+  <text x="60" y="550" class="label">SATELLITE SCENARIO / NOT A DEPLOYED SPACE NETWORK</text>
+  <text x="60" y="580" class="body">Second hypervisor commissioned. Four virtual routers and two relay paths planned; intersite routing remains unverified.</text>
+  <text x="40" y="630" class="note">Logical overview only. Arrows represent intended dependencies, not unrestricted firewall permits. Detailed status: docs/implementation-status.md</text>
+</svg>

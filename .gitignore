@@ -1,0 +1,40 @@
+# Credentials and local overrides
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*credentials*
+*vault-import*
+*passwords*
+
+# Operational data and private artifacts
+*.sqlite*
+*.db
+*.log
+*.docx
+*.pdf
+*.rdp
+*.zip
+*.tar*
+*.age
+*.qcow2
+*.vmdk
+*.iso
+*.raw
+private/
+restricted/
+outputs/
+backups/
+screenshots/
+
+# Tooling
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.DS_Store
+Thumbs.db

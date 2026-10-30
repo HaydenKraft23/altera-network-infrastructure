@@ -1,0 +1,10 @@
+{
+  "simulated": true,
+  "warning": "Documentation-only addresses; not actual lab inventory.",
+  "devices": [
+    {"name": "EXAMPLE-GATEWAY", "role": "Management gateway", "address": "192.0.2.1", "status": "simulated"},
+    {"name": "EXAMPLE-HYPERVISOR", "role": "Tagged-management host", "address": "192.0.2.4", "status": "simulated"},
+    {"name": "EXAMPLE-APPLICATION", "role": "TLS backend", "address": "198.51.100.10", "status": "simulated"},
+    {"name": "EXAMPLE-RELAY", "role": "Modeled remote endpoint", "address": "203.0.113.10", "status": "simulated"}
+  ]
+}

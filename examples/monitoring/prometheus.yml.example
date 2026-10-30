@@ -1,0 +1,11 @@
+# Educational local-only target. No claim of live lab target coverage.
+global:
+  scrape_interval: 30s
+  evaluation_interval: 30s
+
+scrape_configs:
+  - job_name: local_node
+    static_configs:
+      - targets: ['127.0.0.1:9100']
+        labels:
+          environment: training
