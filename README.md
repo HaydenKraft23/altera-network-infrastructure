@@ -1,5 +1,7 @@
 # Altera | Network Infrastructure & Security Lab
 
+[![Validate portfolio artifacts](https://github.com/HaydenKraft23/altera-network-infrastructure/actions/workflows/validate.yml/badge.svg)](https://github.com/HaydenKraft23/altera-network-infrastructure/actions/workflows/validate.yml)
+
 **A segmented enterprise lab built to practice the full lifecycle of infrastructure: design, deployment, secure access, monitoring, troubleshooting, and operational handoff.**
 
 Project lead: **Hayden Kraft** · Academic team project · Sanitized engineering portfolio
